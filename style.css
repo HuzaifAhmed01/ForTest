@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+}
+
+
+:root{
+
+
+--color-1:#fff;
+--color-2:#000;
+--color-3:#808080;
+--color-4:#ff8000;
+
+} 
+
+.page1{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, var(--color-1),var(--color-2));
+    position: relative;
+}
+nav{
+    width: 100%;
+    height: 90px;
+    background-color: var(--color-2);
+    display: flex;
+    color: var(--color-1);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    font-size: 2vw;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+i{
+    font-size: 20px;
+    transition: 0.4s;
+}
+nav i:hover{
+    transform:rotate(90deg);
+    color: var(--color-4);
+
+}
+.menu{
+    width: 400px;
+    height: 0;
+    background-color: var(--color-3);
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    position: absolute;
+    z-index: 0;
+    top: 120px;
+    right: 0px;
+    border-radius: 5px;
+    transition: 0.9s;
+    /* transform: rotate(90deg); */
+    overflow: hidden;
+    opacity: 0;
+    
+
+
+}
+.menu ul li{
+    list-style:none;
+    font-size: 20px;
+line-height: 40px;
+cursor: pointer;
+transition: 0.2s all ease-in-out;
+}
+.menu ul li:hover{
+color: var(--color-4);
+}
+
+
+
+.active{
+    position: absolute;
+    top: 120px;
+    height: 200px;
+    padding: 20px;
+    opacity: 1;
+}
